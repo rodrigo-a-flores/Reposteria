@@ -5,15 +5,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #333;    
     height: 100vh;
-    margin: 0;
 }
 
 /* Estilos del formulario */
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 .form {
     background: #fff;
     padding: 2rem;
