@@ -14,6 +14,7 @@ function ProductDetailsContainer() {
                 const data = await getProductsById(id);
                 if (data) {
                     setItem(data.data);
+
                 }
             }
         };

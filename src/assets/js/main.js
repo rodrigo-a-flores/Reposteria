@@ -59,18 +59,17 @@ export const AuthLogin = () => {
                 },
                 body: JSON.stringify(form_data)
             });
-
             const data = await response.json();
 
-            if (response.ok) {
-                alert('Login exitoso');
+            if (response.ok && data.success) {
+                alert('Inicio de sesion exitoso');
+                localStorage.setItem('authToken', JSON.stringify(data));
                 window.location.href = '/home';
-                return data;
-            } else {
-                console.error(error.message, 'Error al iniciar sesión');
+            }else{
+                alert('Credenciales incorrectas o no registrado');
             }
         } catch (error) {
-            console.error('Mensaje de error:', error.message);
+            console.error('Mensaje de error:', error);
         }
     })
 }

@@ -6,7 +6,7 @@ function Product({producto}) {
             <h2>{producto.productName}</h2>
             <section>
                 <span><Link to={`/products/${producto.id}`}>Ver más</Link></span>
-                <span>{producto.price}</span>
+                <span>S/ {producto.price}</span>
             </section>
         </div>
     )

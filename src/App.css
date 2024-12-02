@@ -34,21 +34,21 @@
   align-items: center;
   padding: 10px 20px;
   margin-bottom: 40px;
-  background-color: #2c3e50;
-  color: white;
+  background-color: #ecbf8f;
+  color: #000;
   font-family: Arial, sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image_logo{
+  width: 60px;
+  height: 60px;
+  mix-blend-mode: color-burn;
 }
 
 /* Logo and company name */
 .navbar-logo {
   display: flex;
   align-items: center;
-}
-
-.navbar-logo img {
-  height: 40px;
-  margin-right: 10px;
 }
 
 .navbar-company-name {

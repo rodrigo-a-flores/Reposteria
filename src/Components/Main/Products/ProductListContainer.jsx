@@ -17,7 +17,7 @@ function ProductListContainer() {
     }, []);
 
     return (
-        <>
+        <>            
             <ProductList products={products} />
         </>
     );
