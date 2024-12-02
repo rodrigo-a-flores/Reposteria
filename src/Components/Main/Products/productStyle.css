@@ -1,0 +1,125 @@
+.container-list{
+    padding: 30px 40px;
+}
+div .list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+div .list div{
+    width: 22%;
+    min-height: 300px;
+    margin: 0px 10px 40px 0px;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+div .list div img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+div .list div h2{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+div .list div p{
+    margin-bottom: 10px;
+}
+div .list div section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+div .list div span{
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: auto;
+}
+div .list div span a{
+    color: #8f0303;
+    text-decoration: none;
+
+}
+div .list div span a:hover{
+    text-decoration: underline;
+    color: #dc0000;
+}
+
+/***********************************************************/
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.product-details {
+    display: flex;
+    min-height: 500px;
+    flex-direction: row;
+    width: 1200px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.img-container {
+    flex: 1;
+    height: 500px;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.text-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-container p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.text-container p:last-of-type {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.product-details button {
+    background-color: #d40a0a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.product-details button:hover {
+    background-color: #f00808;
+}
+
+.product-details span{
+    font-size: 20px;
+    margin: 0px 10px;
+}

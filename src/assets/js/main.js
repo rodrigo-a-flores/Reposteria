@@ -14,7 +14,7 @@ export const AuthRegister = () => {
             password
         }
         try {
-            const response = await fetch('http://localhost:3000/api/register', {
+            const response = await fetch('http://localhost:3000/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -27,6 +27,7 @@ export const AuthRegister = () => {
             if (response.ok) {
                 alert('Usuario registrado con éxito');
                 window.location.href = '/login';
+                return data;
             } else {
                 console.error('Error al registrar el usuario');
             }
@@ -51,7 +52,7 @@ export const AuthLogin = () => {
 
 
         try {
-            const response = await fetch('http://localhost:3000/api/login', {
+            const response = await fetch('http://localhost:3000/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -64,11 +65,32 @@ export const AuthLogin = () => {
             if (response.ok) {
                 alert('Login exitoso');
                 window.location.href = '/home';
+                return data;
             } else {
-                console.error('Error al iniciar sesión');
+                console.error(error.message, 'Error al iniciar sesión');
             }
         } catch (error) {
             console.error('Mensaje de error:', error.message);
         }
     })
 }
+
+export const getProducts = async () => {
+    try {
+        const response = await fetch('http://localhost:3000/api/products');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching all products:', error);
+    }
+}
+
+export const getProductsById = async (id) => {
+    try {
+        const response = await fetch(`http://localhost:3000/api/products/${id}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(`Error fetching product by ID (${id}):`, error);
+    }
+}   
